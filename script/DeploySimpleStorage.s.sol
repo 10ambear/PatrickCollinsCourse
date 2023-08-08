@@ -2,7 +2,7 @@
 pragma solidity 0.8.19;
 
 import {Script} from "forge-std/Script.sol";
-import {SimpleStorage} from "../src/SimpleStorage.sol";
+import {SimpleStorage} from "../src/simple-storage/SimpleStorage.sol";
 
 // to run the deployment script
 // `source .env`
