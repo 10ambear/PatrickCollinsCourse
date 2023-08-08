@@ -14,3 +14,4 @@ Use the following to deploy:
 * To run a specific test run `forge test -vvv --mt <testFunctionName>`
 * mt = match test
 * mc = match contract
+* If you need to test an actual forked URL `forge test -vvv --mt <testFunctionName> --fork-url $RPC_URL`
