@@ -2,7 +2,7 @@ This is just a training repo for the Patrick Collins YouTube course. I'm doing t
 
 I'm using foundry for my testing.
 
-These are some take-aways/tips from the course:
+These are some take-aways/thoughts from the course:
 
 * Run ` source .env ` to add the environment variables to your shell.
 * Run the deployment script:
