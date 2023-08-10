@@ -2,7 +2,7 @@ This is just a training repo for the Patrick Collins YouTube course. I'm doing t
 
 I'm using foundry for my testing.
 
-Use the following to deploy:
+These are some take-aways/tips from the course:
 
 * Run ` source .env ` to add the environment variables to your shell.
 * Run the deployment script:
@@ -15,3 +15,17 @@ Use the following to deploy:
 * mt = match test
 * mc = match contract
 * If you need to test an actual forked URL `forge test -vvv --mt <testFunctionName> --fork-url $RPC_URL`
+* How to check gas prices:
+```     uint256 gasStart = gasleft(); // 1000
+        vm.txGasPrice(GAS_PRICE);
+          vm.startPrank(fundMe.getOwner()); // c:200
+          fundMe.withdraw();
+          vm.stopPrank();
+
+        uint256 gasEnd = gasleft(); // 800
+        uint256 gasUsed = (gasStart - gasEnd) * tx.gasprice;
+        console.log(gasUsed);
+```
+* Check storage `forge inspect src/fund-me/fundMe.sol:FundMe storage --pretty`
+* To get a little gas optimization file you can run `forge snapshot`
+* Have to set `ffi = true` in `foundry.toml` to allow foundry to run scripts on your dev machine 
